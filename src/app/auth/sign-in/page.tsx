@@ -45,19 +45,19 @@ export default function Signin() {
     }
 
     if (result?.ok) {
-      router.push('/admin/dashboard')
+      router.push('/')
     }
   }
   return (
     <div className={cn("flex flex-col gap-6")}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-center">Sign into MindPad</CardTitle>
+          <CardTitle className="text-center">Sign into "your app name"</CardTitle>
           <CardDescription className="text-center">
             Welcome back ! Please sign in to Continue
           </CardDescription>
           <div className="grid mt-4">
-            <Button variant="outline" type="submit" onClick={() => signIn('google', { callbackUrl: "/admin/dashboard" })} className="w-full gap-3 flex">
+            <Button variant="outline" type="submit" onClick={() => signIn('google', { callbackUrl: "/" })} className="w-full gap-3 flex">
               Sign in with Google
             </Button>
           </div>

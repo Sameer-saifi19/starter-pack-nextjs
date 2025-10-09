@@ -38,7 +38,7 @@ export default function Signup() {
             } else {
                 setError(null)
                 setSuccess("User created Successfully")
-                router.push('/auth/signin')
+                router.push('/auth/sign-in')
             }
         } catch (error: any) {
             console.error(error.message || "Something went wrong")
@@ -50,12 +50,12 @@ export default function Signup() {
         <div className={cn("flex flex-col gap-6")}>
             <Card>
                 <CardHeader>
-                    <CardTitle className="text-center">Create your MindPad account</CardTitle>
+                    <CardTitle className="text-center">Create your "your app name" account</CardTitle>
                     <CardDescription className="text-center">
                         Welcome! Please fill in your details to get started
                     </CardDescription>
                     <div className="grid mt-4">
-                        <Button variant="outline" type="submit" onClick={() => signIn('google', { callbackUrl: "/dashboard" })} className="w-full gap-3 flex">
+                        <Button variant="outline" type="submit" onClick={() => signIn('google', { callbackUrl: "/" })} className="w-full gap-3 flex">
                             Sign in with Google
                         </Button>
                     </div>
@@ -102,7 +102,7 @@ export default function Signup() {
                                 <div className="flex items-center">
                                     <Label htmlFor="password">Password</Label>
                                     <a
-                                        href="/user/auth/password-reset"
+                                        href="/auth/password-reset"
                                         className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
                                     >
                                         Forgot your password?
@@ -149,7 +149,7 @@ export default function Signup() {
                         </div>
                         <div className="mt-4 text-center text-sm">
                             Already have an account?{" "}
-                            <a href="/auth/signin" className="underline underline-offset-4">
+                            <a href="/auth/sign-in" className="underline underline-offset-4">
                                 Sign in
                             </a>
                         </div>
