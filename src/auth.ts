@@ -1,5 +1,5 @@
 import NextAuth, {CredentialsSignin} from "next-auth";
-import { prisma } from "./lib/prisma";
+import { prisma } from '@/lib/prisma'
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import Google from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
